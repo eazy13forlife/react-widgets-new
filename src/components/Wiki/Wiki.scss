@@ -1,0 +1,48 @@
+.WikiContainer {
+  margin-top: 3rem;
+}
+.WikiItem {
+  padding: 1.5rem;
+  box-shadow: 3px 3px 9px lightgrey;
+  border: 1px solid lightgrey;
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  &:hover {
+    transform: translateY(-1rem);
+    box-shadow: -3px 15px 14px lightgrey;
+  }
+
+  &__content {
+    width: 80%;
+  }
+
+  &__button-container {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button {
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    height: 100%;
+
+    &:hover {
+      background-color: rgb(227, 227, 227);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+a {
+  display: block;
+  width: 60%;
+  height: 75%;
+}

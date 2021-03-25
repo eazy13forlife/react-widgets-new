@@ -2,8 +2,10 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import "./App.css";
+import "../../styles/main.scss";
+
 import Dropdown from "../Dropdown/Dropdown.js";
-import Wikipedia from "../Wikipedia/Wikipedia.js";
+import Wikipedia from "../Wiki/";
 import Accordion from "../Accordion/Accordion.js";
 import Translate from "../Translate/Translate.js";
 import Header from "../Header/Header.js";

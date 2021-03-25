@@ -1,0 +1,14 @@
+.Wiki__form {
+  height: 10vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: auto;
+}
+.Wiki__input {
+  width: 50%;
+  padding: 1rem;
+  border-radius: 5px;
+
+  display: block;
+}

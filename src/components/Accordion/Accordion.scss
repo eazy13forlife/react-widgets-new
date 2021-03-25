@@ -1,0 +1,53 @@
+.Accordion-page {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 1rem);
+}
+
+.Accordion {
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  transform: translateY(-3rem);
+  box-shadow: 1px 3px 10px lightgrey;
+  padding: 2rem;
+
+  &:hover {
+    box-shadow: 1px 27px 14px lightgrey;
+    transform: translateY(-4rem);
+  }
+
+  &__header {
+    display: inline-block;
+    font-size: 3rem;
+    padding-left: 3rem;
+    cursor: pointer;
+
+    i {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 500ms;
+    }
+  }
+
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      border-bottom: 1px solid lightgrey;
+    }
+  }
+
+  &__paragraph-container {
+    height: 300px;
+    overflow: hidden;
+    transition: height 500ms ease-out;
+  }
+}
+
+.selected {
+  i {
+    transform: rotate(90deg);
+  }
+}
