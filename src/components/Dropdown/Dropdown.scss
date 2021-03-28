@@ -1,0 +1,47 @@
+.DropdownPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  overflow: auto;
+
+  .Dropdown {
+    margin-top: -24rem;
+    border: 1px solid black;
+    width: 25%;
+  }
+}
+
+.Dropdown {
+  &__header {
+    padding: 1rem;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  &__options {
+    display: none;
+  }
+  &__option {
+    font-size: 1.7rem;
+    padding: 1rem;
+
+    &:first-child {
+      border-top: 1px solid black;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid black;
+    }
+  }
+}
+
+.open {
+  .Dropdown__options {
+    display: block;
+  }
+}

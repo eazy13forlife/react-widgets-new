@@ -9,7 +9,7 @@ import Wikipedia from "../Wiki/";
 import Accordion from "../Accordion/Accordion.js";
 import Translate from "../Translate/Translate.js";
 import Header from "../Header/Header.js";
-
+import DropdownPage from "../Dropdown/";
 const App = () => {
   return (
     <div className="App">
@@ -17,7 +17,7 @@ const App = () => {
         <Header />
         <Route path="/" exact component={Accordion} />
         <Route path="/wikipedia" exact component={Wikipedia} />
-        <Route path="/dropdown" exact component={Dropdown} />
+        <Route path="/dropdown" exact component={DropdownPage} />
         <Route path="/translate" exact component={Translate} />
       </BrowserRouter>
     </div>

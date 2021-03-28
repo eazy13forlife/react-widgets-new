@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 
 import "./Accordion.scss";
 import AccordionItem from "../AccordionItem/AccordionItem.js";
-
 import { selectQuestion } from "../../actions/";
 
 const basketballPlayers = [
@@ -28,12 +27,12 @@ const Accordion = () => {
   const accordionRef = useRef();
 
   useEffect(() => {
-    document.querySelector("body").addEventListener("click", (e) => {
-      // if where we click (e.target) is outside of our actual accordion, then set the selected to null
+    const closeAccordion = (e) => {
       if (accordionRef.current && !accordionRef.current.contains(e.target)) {
         dispatch(selectQuestion(null));
       }
-    });
+    };
+    document.querySelector("body").addEventListener("click", closeAccordion);
   }, [dispatch]);
 
   const renderedAccordion = basketballPlayers.map((object, index) => {

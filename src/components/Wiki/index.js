@@ -28,7 +28,6 @@ const WikiPage = () => {
   }, [dispatch]);
 
   const renderedContent = () => {
-    console.log(loaded);
     if (!loaded) {
       return null;
     } else if (APIError) {
