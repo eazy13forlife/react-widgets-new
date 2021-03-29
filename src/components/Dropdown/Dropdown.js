@@ -15,18 +15,24 @@ const colorOptions = [
     value: "pink",
   },
 ];
-const Dropdown = () => {
+const Dropdown = ({ onOptionClick }) => {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("");
   const dropdownRef = useRef();
 
   useEffect(() => {
-    document.querySelector("body").addEventListener("click", (e) => {
-      console.log("heyjj");
+    const closeDropdown = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setOpen(false);
       }
-    });
+    };
+    document.querySelector("body").addEventListener("click", closeDropdown);
+
+    return () => {
+      document
+        .querySelector("body")
+        .removeEventListener("click", closeDropdown);
+    };
   }, []);
 
   const renderedColorOptions = colorOptions.map((object, index) => {
@@ -37,6 +43,7 @@ const Dropdown = () => {
           className="Dropdown__option"
           onClick={() => {
             setSelected(object.label);
+            onOptionClick(object.value);
             setOpen(false);
           }}
         >

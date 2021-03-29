@@ -1,5 +1,6 @@
 .DropdownPage {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 95vh;
@@ -9,6 +10,22 @@
     margin-top: -24rem;
     border: 1px solid black;
     width: 25%;
+  }
+
+  &__para {
+    margin-top: 1rem;
+
+    &--blue {
+      color: blue;
+    }
+
+    &--pink {
+      color: pink;
+    }
+
+    &--red {
+      color: red;
+    }
   }
 }
 

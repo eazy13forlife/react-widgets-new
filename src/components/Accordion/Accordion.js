@@ -33,6 +33,12 @@ const Accordion = () => {
       }
     };
     document.querySelector("body").addEventListener("click", closeAccordion);
+
+    return () => {
+      document
+        .querySelector("body")
+        .removeEventListener("click", closeAccordion);
+    };
   }, [dispatch]);
 
   const renderedAccordion = basketballPlayers.map((object, index) => {
