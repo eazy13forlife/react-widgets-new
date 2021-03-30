@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useMemo } from "react";
 import { useDispatch } from "react-redux";
 import { reduxForm, Field } from "redux-form";
 
@@ -53,7 +53,7 @@ const SearchBar = (props) => {
       <Field
         name="searchString"
         component={createInput}
-        onChange={(undefined, newValue) => {
+        onChange={(event, newValue) => {
           if (newValue) {
             getWikiResults(fetchWikiResults(newValue));
           }

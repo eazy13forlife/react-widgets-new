@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import translateOptions from "../../api.js";
 import SearchBar from "./SearchBar.js";
 import Dropdown from "../Dropdown/Dropdown.js";
 
@@ -55,6 +54,20 @@ const TranslatePage = () => {
     getTranslatedText();
   }, [language, text]);
 
+  const returnTranslatedParagraph = () => {
+    // if it is loading, return translatring
+    if (loading) {
+      return <span className="word">Translating...</span>;
+    } else {
+      // otherwise, if done, but no language selected, return select a language
+      if (text && !language) {
+        return <span className="word">Please select a language</span>;
+        // otherwise, return whatever the translated text. I'm going to ignore if someone doesn't put text, because obviously you have to put text to translate.
+      } else {
+        return <span className="word">{translatedText}</span>;
+      }
+    }
+  };
   return (
     <div className="TranslatePage">
       <SearchBar onInputChange={setText} />
@@ -66,11 +79,7 @@ const TranslatePage = () => {
       <p className="TranslatePage__translation">
         <span className="u-bold">Translated text:</span>
         <br />
-        {loading ? (
-          <span className="word">Translating...</span>
-        ) : (
-          <span className="word">{translatedText}</span>
-        )}
+        {returnTranslatedParagraph()}
       </p>
     </div>
   );

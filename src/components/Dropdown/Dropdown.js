@@ -51,6 +51,7 @@ const Dropdown = ({ onOptionClick, options, title }) => {
         <img
           src="https://img.icons8.com/ios-filled/26/000000/long-arrow-down.png"
           className="Dropdown__icon"
+          alt="Dropdown arrow"
         />
       </div>
       <div className="Dropdown__options">{renderedColorOptions}</div>
