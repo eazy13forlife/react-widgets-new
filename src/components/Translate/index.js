@@ -3,6 +3,7 @@ import axios from "axios";
 
 import SearchBar from "./SearchBar.js";
 import Dropdown from "../Dropdown/Dropdown.js";
+import translate from "../../apiKeys.js";
 
 const languageOptions = [
   {
@@ -37,8 +38,7 @@ const TranslatePage = () => {
               sl: "en",
             },
             headers: {
-              "x-rapidapi-key":
-                "f5ccaa0bb8msh63eb609ff46e586p12f55djsn8088bb1da5d6",
+              "x-rapidapi-key": translate,
               "x-rapidapi-host": "google-translate20.p.rapidapi.com",
             },
           }

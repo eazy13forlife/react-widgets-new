@@ -14,7 +14,6 @@ const fetchWikiResults = (dogs) => {
           format: "json",
         },
       });
-      console.log(response.data.query.search);
       dispatch({
         type: types.FETCH_WIKI_RESULTS,
         payload: response.data.query.search,
