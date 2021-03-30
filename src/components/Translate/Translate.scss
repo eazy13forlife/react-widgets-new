@@ -1,0 +1,45 @@
+.TranslatePage {
+  height: 95vh;
+  .Dropdown {
+    width: 40%;
+    border: 1px solid black;
+    margin-left: 2rem;
+  }
+
+  &__translation {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+  }
+}
+.u-bold {
+  font-weight: bold;
+}
+.word {
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.TranslateSearch {
+  height: 14rem;
+  padding-top: 2rem;
+
+  &__input-container {
+    width: 80%;
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+  &__paragraph {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  &__input {
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 1.3rem;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

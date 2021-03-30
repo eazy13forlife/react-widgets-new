@@ -7,7 +7,7 @@ import "../../styles/main.scss";
 import Dropdown from "../Dropdown/Dropdown.js";
 import Wikipedia from "../Wiki/";
 import Accordion from "../Accordion/Accordion.js";
-import Translate from "../Translate/Translate.js";
+import Translate from "../Translate/";
 import Header from "../Header/Header.js";
 import DropdownPage from "../Dropdown/";
 const App = () => {

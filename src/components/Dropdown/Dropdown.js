@@ -1,21 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Dropdown.scss";
 
-const colorOptions = [
-  {
-    label: "Fire Red",
-    value: "red",
-  },
-  {
-    label: "Ocean Blue",
-    value: "blue",
-  },
-  {
-    label: "Hot Pink",
-    value: "pink",
-  },
-];
-const Dropdown = ({ onOptionClick }) => {
+const Dropdown = ({ onOptionClick, options, title }) => {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState("");
   const dropdownRef = useRef();
@@ -35,7 +21,7 @@ const Dropdown = ({ onOptionClick }) => {
     };
   }, []);
 
-  const renderedColorOptions = colorOptions.map((object, index) => {
+  const renderedColorOptions = options.map((object, index) => {
     if (object.label !== selected) {
       return (
         <p
@@ -61,9 +47,7 @@ const Dropdown = ({ onOptionClick }) => {
           setOpen(!open);
         }}
       >
-        <h2 className="Dropdown__heading">
-          {selected ? selected : "Select Color"}
-        </h2>
+        <h2 className="Dropdown__heading">{selected ? selected : title}</h2>
         <img
           src="https://img.icons8.com/ios-filled/26/000000/long-arrow-down.png"
           className="Dropdown__icon"
