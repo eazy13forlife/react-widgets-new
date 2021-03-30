@@ -65,10 +65,11 @@ const TranslatePage = () => {
       />
       <p className="TranslatePage__translation">
         <span className="u-bold">Translated text:</span>
+        <br />
         {loading ? (
           <span className="word">Translating...</span>
         ) : (
-          <span className="word">{` ${translatedText}`}</span>
+          <span className="word">{translatedText}</span>
         )}
       </p>
     </div>

@@ -7,12 +7,11 @@ const renderInput = ({ input }) => {
   return (
     <div className="TranslateSearch__input-container">
       <p className="TranslateSearch__paragraph">Enter Text</p>
-      <input
-        type="text"
+      <textarea
         name="translate search-string"
         className="TranslateSearch__input"
         {...input}
-      />
+      ></textarea>
     </div>
   );
 };
@@ -29,11 +28,11 @@ const returnDebounceFunction = (func, timeout = 500) => {
 
 const TranslateSearchBar = (props) => {
   const onSubmit = (formValues) => {
-    props.onFormSubmit(formValues.searchString);
+    return;
   };
 
   const setText = useMemo(() => {
-    return returnDebounceFunction(props.onInputChange, 500);
+    return returnDebounceFunction(props.onInputChange, 650);
   }, [props.onInputChange]);
 
   console.log(props);

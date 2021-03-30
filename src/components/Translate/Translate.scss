@@ -1,17 +1,20 @@
 .TranslatePage {
   height: 95vh;
+
   .Dropdown {
     width: 40%;
     border: 1px solid black;
+    margin-top: 3rem;
     margin-left: 2rem;
   }
 
   &__translation {
     margin-left: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     font-size: 1.8rem;
   }
 }
+
 .u-bold {
   font-weight: bold;
 }
@@ -19,17 +22,16 @@
   font-size: 1.8rem;
   font-style: normal;
 }
-.TranslateSearch {
-  height: 14rem;
-  padding-top: 2rem;
 
+.TranslateSearch {
   &__input-container {
     width: 80%;
-    margin-top: 2rem;
+    padding-top: 3rem;
     margin-left: 2rem;
   }
   &__paragraph {
     font-size: 1.8rem;
+    font-weight: bold;
     margin-bottom: 1rem;
   }
   &__input {
